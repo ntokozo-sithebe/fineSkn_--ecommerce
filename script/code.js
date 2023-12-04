@@ -1,0 +1,1 @@
+let footer = document.querySelectorAll('[data-year]').textContent = new Date().getUTCFullYear
