@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: rgb(185, 221, 236);
+    background-color: rgb(188, 222, 237);
     justify-content: center;
     align-items: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -26,7 +26,7 @@ img[alt="home"]{
     height: auto;
     aspect-ratio: 1/1;
     max-zoom: 15px;
-    object-fit: scale-down;
+    background-size: cover;
     object-position: 25% 25%;
     overflow: hidden;
 
