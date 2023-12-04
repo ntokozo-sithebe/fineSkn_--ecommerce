@@ -22,10 +22,7 @@ img[alt="logo"]{
     
 }
 
-
-p.homepara{
-    margin: 5rem;
-    padding: 10rem;
-    justify-content: center;
-    align-items: center;
+.slide-about{
+    display: inline-block;
+    margin-left: rem;
 }
