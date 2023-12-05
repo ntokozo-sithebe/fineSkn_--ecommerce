@@ -1,5 +1,9 @@
-::before
-::after{
+
+  @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Merriweather:wght@700&family=Nova+Square&family=Playfair+Display:ital@0;1&display=swap');
+
+*,
+*::before
+*::after{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -9,8 +13,11 @@ body{
     background-color: rgb(188, 222, 237);
     justify-content: center;
     align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Nova Square', sans-serif;
+    font-family: 'Merriweather', serif;
     text-align: center;
+    font-family: 'Playfair Display', serif;
 }
 
 ::-webkit-scrollbar{
@@ -24,5 +31,11 @@ img[alt="logo"]{
 
 .slide-about{
     display: inline-block;
-    margin-left: rem;
+    margin-left:  20rem;
+    border-radius: 20px;
+    grid-template-columns: 30% 30% 30%;
+    margin: 20px ;
+
+
+
 }

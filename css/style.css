@@ -1,5 +1,10 @@
-::before
-::after{
+
+  @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Merriweather:wght@700&family=Nova+Square&family=Playfair+Display&display=swap');
+
+
+*,
+*::before,
+*::after{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -9,7 +14,10 @@ body{
     background-color: rgb(188, 222, 237);
     justify-content: center;
     align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Nova Square', sans-serif;
+    font-family: 'Playfair Display', serif;
     text-align: center;
 }
 
@@ -29,3 +37,13 @@ p.homepara{
     justify-content: center;
     align-items: center;
 }
+
+.slide-about{
+    grid-row: auto;
+    grid-column: 30% 30% 30%;
+    width: 20rem;
+    aspect-ratio: 1/1;
+
+
+}
+
