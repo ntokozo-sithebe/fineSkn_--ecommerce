@@ -70,7 +70,11 @@ function ViewProducts(){
               </div>`
             })
         } else{
-            fineWrapper.innerHTML = "No products"           // add spinner
+            fineWrapper.innerHTML += `<div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>`           // add spinner
     }
     
         
@@ -102,13 +106,13 @@ Search.addEventListener('keyup', ()=>{
               </div> `
             })
         }else { 
-            fineWrapper.innerHTML = `<div class="d-flex justify-content-center">
+            fineWrapper.innerHTML += `<div class="d-flex justify-content-center">
         <div class="spinner-border" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
       </div>`
             
-            
+            // mayChange
         }
     }catch(e){
         (e.message)
