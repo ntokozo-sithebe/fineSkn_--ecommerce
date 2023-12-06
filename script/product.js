@@ -36,7 +36,7 @@ localStorage.setItem('products', JSON.stringify(
         },{
             id : "5",
             productType: "Toner",
-            Price: 750,
+            Price: 750 ,
             description: "Used day and night",
             image:"https://i.postimg.cc/3rgfvK3c/white-tea-toner-stylized-opt-720x-no5.jpg" 
     
@@ -52,7 +52,7 @@ localStorage.setItem('products', JSON.stringify(
 ))
 
 
-let fineWrapper = document.querySelector('[data-products]') 
+const fineWrapper = document.querySelector('[data-products]') 
 
 function ViewProducts(){
     fineWrapper.innerHTML = "";
@@ -64,7 +64,7 @@ function ViewProducts(){
                 <img src="${product.image}" class="card-img-top" alt=${product.id}>
                 <div class="card-body">
                   <h5 class="card-title">${product.productType}</h5>
-                  <p class="card-text">${product.description}.</p>
+                  <p class="card-text">${product.Price}.</p>
                   <button href="#" class="btn btn-primary">Add to Cart</button>
                 </div>
               </div>`
@@ -86,21 +86,23 @@ function ViewProducts(){
 ViewProducts();
 
 
-let Search = document.querySelector('[data-input]')
-Search.addEventListener('keyup', ()=>{
+let searchInput = document.querySelector('[data-input]')
+searchInput.addEventListener('keyup', ()=>{
     try{
-        let SearchItem = products.filter(prod=> {
-            return prod.description.toLowerCase().includes(Search.value.toLowerCase())
+        let searchResults = products.filter(prod=> {
+            return prod.productType.toLowerCase().includes(searchInput.value.toLowerCase()) 
         })
-        if(SearchItem){
+
+        console.log(searchResults);
+        if(searchResults.length > 0){
             fineWrapper.innerHTML = ""
-            SearchItem.forEach(item =>{
+            searchResults.forEach(item =>{
                 fineWrapper.innerHTML +=
                 `<div class="card" w-25>
                 <img src="${item.image}" class="card-img-top" alt=${item.id}>
                 <div class="card-body">
                   <h5 class="card-title">${item.productType}</h5>
-                  <p class="card-text">${item.description}.</p>
+                  <p class="card-text">${item.price}.</p>
                   <button href="#" class="btn btn-primary">Add to Cart</button>
                 </div>
               </div> `
@@ -115,82 +117,94 @@ Search.addEventListener('keyup', ()=>{
             // mayChange
         }
     }catch(e){
-        (e.message)
+        fineWrapper.innerHTML = "Please try again later"
     }
 })
 
-let btnSort = document.querySelector('[data-search]')
+/
+
+
+
+ [ [{
+    id : "1",
+    productType: "Cream",
+    Price: 450,
+    description: "Used day and night",
+    image: " https://i.postimg.cc/zvbhjbnh/cream-stylized-product-opt-540x.webp",
+
+},{
+    id : "2",
+    productType: "Cleanser",
+    Price: 550,
+    description: "Used day and night",
+    image:"https://i.postimg.cc/xC0qsszM/goji-berry-clenser-opt-900x.webp" ,
+
+},{
+     id : "3",
+     productType: "Vitamin C Serum",
+     Price: 560,
+     description: "Used day and night",
+     image:"https://i.postimg.cc/3NbX9pCC/vitamin-c-serum-stylized-2-opt-900x.webp" ,
+
+},{
+    id : "4",
+    productType: "Deep Eye Therapy",
+    Price: 680,
+    description: "Used day and night",
+    image: "https://i.postimg.cc/zvtQKHL7/eye-complex-stylized-optimized-900x.webp",
+
+},{
+    id : "5",
+    productType: "Toner",
+    Price: 750,
+    description: "Used day and night",
+    image:"https://i.postimg.cc/3rgfvK3c/white-tea-toner-stylized-opt-720x-no5.jpg" 
+
+},{
+    id : "6",
+    productType: "Fine SKN All in One",
+    Price: 7750,
+    description: "Used day and night",
+    image:"https://i.postimg.cc/Z5r9q8vr/all-5.webp" ,
+
+}]
+
+]
+
+
+ 
+function displayPrice(list){
+priceWrapper.innerHTML= '';
+list.forEach(item =>{
+    priceWrapper.innerHTML += ` 
+    <div>
+                <div class="card-body">
+                  <h5 class="card-title">${item.productType}</h5>
+                  <p class="card-text">${item.Price}.</p>
+                </div>
+              </div> 
+    `
+
+} )
+}
+let priceWrapper = document.querySelector('[data-products]')
+
+let btnSort = document.querySelector('[data-sort]')
+
+btnSort.addEventListener('click',()=>{
+   try{
+    let sortedItem = products.sort((arg1, arg2)=>{
+        return arg1.Price - arg2.Price
+    })
+    displayPrice(sortedItem)
+   }
+   catch(e){
+    console.log(e)
+    priceWrapper.innerHTML = 'No Fine SKN price Found'
+   }
+}) 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let  = document.querySelector('[data-products]').innerHTML =`
-// <div class="card" style="width: 18rem;">
-//   <img src="https://i.postimg.cc/zvbhjbnh/cream-stylized-product-opt-540x.webp" loading = "lazy" class = d-flex w-50 img-fluid class="card-img-top" alt="product1">
-//   <div class="card-body">
-//     <h5 class="card-title">Cream</h5>
-//     <p class="card-text">infused with natural iingredients</p>
-//     <a href="#" class="btn btn-primary"> Add to cart</a>
-//   </div>
-// </div>
-// <div class="card" style="width: 18rem;">
-//   <img src="https://i.postimg.cc/3rgfvK3c/white-tea-toner-stylized-opt-720x-no5.jpg" loading = "lazy" class = d-flex w-50 img-fluid
-//   class="card-img-top" alt="product2">
-//   <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//     <a href="#" class="btn btn-primary">Add to cart</a>
-//   </div>
-// </div> 
-// <div class="card" style="width: 18rem;">
-//   <img src="https://i.postimg.cc/zvtQKHL7/eye-complex-stylized-optimized-900x.webp" loading = "lazy" class = d-flex w-50 img-fluid class="card-img-top" alt="product3">
-//   <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">Some qu0ick example text to build on the card title and make up the bulk of the card's content.</p>
-//     <a href="#" class="btn btn-primary">Add to cart</a>
-//   </div>
-// </div> 
-// <div class="card" style="width: 18rem;">
-//   <img src="https://i.postimg.cc/xC0qsszM/goji-berry-clenser-opt-900x.webp" loading = "lazy" class ="d-flex w-50 img-fluid">
-//    class="card-img-top" alt="product4">
-//   <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//     <a href="#" class="btn btn-primary">Add to cart</a>
-//   </div>
-// </div> 
-// <div class="card" style="width: 18rem;">
-//   <img src="https://i.postimg.cc/3NbX9pCC/vitamin-c-serum-stylized-2-opt-900x.webp" loading = "lazy" class ="d-flex w-50 img-fluid">
-//  class="card-img-top" alt="product5">
-//   <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//     <a href="#" class="btn btn-primary">Add to cart</a>
-//   </div>
-// </div> 
-// <div class="card" style="width: 18rem;">
-//   <img src="https://i.postimg.cc/Z5r9q8vr/all-5.webp" alt="product5" loading = "lazy" class = d-flex w-50 img-fluid class="card-img-top" alt="picture6">
-//   <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//     <a href="#" class="btn btn-primary">Add to cart</a>
-//   </div>
-// </div> 
-// `
