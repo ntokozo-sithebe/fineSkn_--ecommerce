@@ -65,7 +65,7 @@ function ViewProducts(){
                 <div class="card-body">
                   <h5 class="card-title">${product.productType}</h5>
                   <p class="card-text">${product.Price}.</p>
-                  <button href="#" class="btn btn-primary">Add to Cart</button>
+                  <button type='button' class="btn btn-primary" onclick='add2cart(${JSON.stringify(product)})' >Add to Cart</button>
                 </div>
               </div>`
             })
@@ -103,7 +103,7 @@ searchInput.addEventListener('keyup', ()=>{
                 <div class="card-body">
                   <h5 class="card-title">${item.productType}</h5>
                   <p class="card-text">${item.price}.</p>
-                  <button href="#" class="btn btn-primary">Add to Cart</button>
+                  <button href="#" data-addTocart class="btn btn-primary">Add to Cart</button>
                 </div>
               </div> `
             })
@@ -205,6 +205,15 @@ btnSort.addEventListener('click',()=>{
 }) 
 
 
+ 
+ // for checkout need this to target !
+let cart = []
+function add2cart(item){
+    console.log();
+    if(cart)   // add the cart items into the array
+    cart.push(item)
+localStorage.setItem('cart', JSON.stringify(cart))
+}
 
 
 
