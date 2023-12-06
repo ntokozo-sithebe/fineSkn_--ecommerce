@@ -209,8 +209,8 @@ btnSort.addEventListener('click',()=>{
  // for checkout need this to target !
 let cart = []
 function add2cart(item){
-    console.log();
-    if(cart)   // add the cart items into the array
+    console.log(); // the array
+    if(cart)   // add the cart items into the array once clicked (hence onclick intead of EventListener)
     cart.push(item)
 localStorage.setItem('cart', JSON.stringify(cart))
 }
