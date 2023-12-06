@@ -67,3 +67,22 @@ input.form-control{
 .row{
     margin-block: 1rem ;
 }
+
+#tableAdmin{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    height: 20rem;
+    
+}
+
+#tableAdmin img{
+    width: 70px;
+}
+#tableAdmin button{
+    padding: 2px;
+    background-color: rgb(188, 222, 237);;
+}
+
