@@ -42,3 +42,18 @@ img[alt="logo"]{
     border-radius: 20px;
     width: 15rem;
 }
+
+.next {
+    display: flex;
+}
+
+.table {
+    flex-grow: 1;
+    margin-right: 10px; /* Adjust margin as needed for spacing between tables */
+}
+
+/* Optional: Remove the margin from the last table to avoid extra spacing */
+.table:last-child {
+    margin-right: 0;
+}
+

@@ -21,6 +21,10 @@ body{
     text-align: center;
 }
 
+.ms-auto {
+    margin-left: 0!important;
+}
+
 ::-webkit-scrollbar{
     display: none;
 }
