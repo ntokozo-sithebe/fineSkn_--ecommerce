@@ -84,5 +84,8 @@ input.form-control{
 #tableAdmin button{
     padding: 2px;
     background-color: rgb(188, 222, 237);;
+    border-radius: 5px;
+    align-items: center;
+    margin: 15px;
 }
 
