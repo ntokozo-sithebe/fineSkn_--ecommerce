@@ -100,7 +100,7 @@ function ViewProducts() {
                                   </div>
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Add Product</button>
+                                    <button type="button" class="btn btn-primary" onclick='addNewProduct'>Add Product</button>
                                   </div>
                                 </div>
                               </div>
@@ -138,7 +138,10 @@ function remove(id){
 
   products.splice(id, 1);
   JSON.parse(localStorage.setItem('products', item))
+  ViewProducts();
 }
+
+// console.log(remove('id'));
 
 
 
@@ -148,9 +151,9 @@ function remove(id){
 function addNewProduct(){
   let newItem = []
 
-  newItem.push(product).
+  newItem.push(products).
   
-  JSON.parse(localStorage.setItem('product', JSON.parse))
+  JSON.parse(localStorage.setItem('products', JSON.parse))
 
 }
 
