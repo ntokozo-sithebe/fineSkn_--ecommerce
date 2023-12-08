@@ -127,7 +127,7 @@ padding: 10px;
         text-align: center;
         
     }
-    #contactForms{
+#contactForms{
         padding: 10px;
         justify-content: center;
         margin-left: 10px;
@@ -147,9 +147,10 @@ padding: 10px;
     img[a]{width: 4em;
     }
 } */
-@media screen and (width < 360){
+@media screen and (max-width < 360){
     table{
-        width: 50%
+        width: 20%;
+        
     }
     .homeparagraph{
         justify-content: center;
@@ -167,3 +168,8 @@ padding: 10px;
         justify-content: center;
         margin: 10px;
 }}
+
+/* #navbarNav{
+    margin-block
+
+} */
