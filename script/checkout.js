@@ -13,9 +13,10 @@ function ViewProducts() {
       <tr>
           <th scope="row">${shoppingItems[key][0].id}</th>     
           <td>
-          <img src="${shoppingItems[key][0].image}" 
+          <img src=${shoppingItems[key][0].image} 
           class="img-fluid w-25" alt="${shoppingItems[key][0].productType}">
           </td>
+          <td>"${shoppingItems[key][0].productType}"</td>
           <td>${shoppingItems[key].length}</td>
           <td>R${shoppingItems[key][0].Price}</td>
           <td>R${eval(
@@ -43,7 +44,13 @@ ViewProducts();
 
 
 function addAmount(){
+let amount = document.querySelector('[data-amount]').value
 
-  `${shoppingItems[key][0].Price} * ${shoppingItems[key].length}`
+ return `${shoppingItems[key][0].Price} * ${shoppingItems[key].length}`
   
+}console.log();
+addAmount
+
+let btnPurchase = document.querySelectorAll('[purchaseBtn]');{
+  alert = 'Thank you for Purchasing Fine SKN'
 }

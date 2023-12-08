@@ -138,7 +138,7 @@ function remove(id){
 
   products.splice(id, 1);
   JSON.parse(localStorage.setItem('products', item))
-  ViewProducts();
+  ViewProducts()
 }
 
 // console.log(remove('id'));

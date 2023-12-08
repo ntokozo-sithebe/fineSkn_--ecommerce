@@ -105,24 +105,65 @@ padding: 10px;
     width: 15rem;
 }
 
-/* #homePicture {
-    height: 70vh;
+#homePicture {
+    height: 50vh;
     width: 100%;
     background-image: url(https://i.postimg.cc/13V4vn5j/no4-Ecomm.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0% 30%;
+    background-position: 0% 37%;
     background-attachment: fixed;
     backdrop-filter: blur(10rem);
     opacity: 90%;
     color: black;
+    margin: auto;
     
-    }  */
+    }  
 .homeparagraph{
-        /* margin: 3rem; */
-        padding: 10rem;
+        margin: 3rem;
+        /* padding: 10rem; */
         justify-content: center;
         align-items: center;
         text-align: center;
         
     }
+    #contactForms{
+        padding: 10px;
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    
+.purchaseBtn{
+        width: 5rem;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgb(155, 187, 200);;
+        justify-content: center;
+    }
+
+/* @media screen and (width < 360){
+    img[a]{width: 4em;
+    }
+} */
+@media screen and (width < 360){
+    table{
+        width: 50%
+    }
+    .homeparagraph{
+        justify-content: center;
+    }
+    
+}
+
+#products .card{
+    margin: 2rem;
+    
+}
+
+@media screen and (width < 360) {
+    #products .card{
+        justify-content: center;
+        margin: 10px;
+}}

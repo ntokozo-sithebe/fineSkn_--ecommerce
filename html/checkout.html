@@ -50,11 +50,12 @@
 
 
     <main>
-        <div class="container vh-100">
+        <div class="container">
             <div class="row">
                 <table class="table">
                     <thead>
                         <tr>
+                            <th scope="col">Id</th>
                             <th scope="col">Image</th>
                             <th scope="col">Product Type</th>
                             <th scope="col">Quantity</th>
@@ -68,9 +69,11 @@
                 </table>
             </div>
         </div>
-        <div class="row d-block gap-5">
-            <input data-amount type="text">
-            <form>Total amount $</form>
+        <div class="row justify-content-center col-md-3 m-3">
+            <input data-amount type="text"placeholder="Total Amount R">
+        </div>
+        <div class="row me-auto m-5">
+            <button class="purchaseBtn">Purchase</button>
         </div>
         </div>
 
