@@ -64,7 +64,7 @@ function ViewProducts() {
       products.forEach((product) =>{
         fineWrapper.innerHTML +=
                          `<div class="row"> <tr>
-                         <th >${product.id}</th>
+                            <td>${product.id}</td>
                             <td><img src="${product.image}" class="image w-25"</td>
                             <td>${product.productType}</td>
                             <td > ${product.Price}</td>
@@ -90,7 +90,35 @@ ViewProducts();
 
 
 
-
+// {/* <table class="table">
+//   <thead>
+//     <tr>
+//       <th scope="col">#</th>
+//       <th scope="col">First</th>
+//       <th scope="col">Last</th>
+//       <th scope="col">Handle</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <th scope="row">${product.id}</th>
+//       <td>${product.productType}</td>
+//       <td>${product.price}</td>
+//       <td>Action</td>
+//     </tr>
+//     <tr>
+//       <th scope="row">2</th>
+//       <td>Jacob</td>
+//       <td>Thornton</td>
+//       <td>@fat</td>
+//     </tr>
+//     <tr>
+//       <th scope="row">3</th>
+//       <td colspan="2">Larry the Bird</td>
+//       <td>@twitter</td>
+//     </tr>
+//   </tbody>
+// </table> */}
 
 
 
