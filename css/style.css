@@ -104,20 +104,22 @@ padding: 10px;
     border-radius: 20px;
     width: 15rem;
 }
-/* main {
-    height: 100vh;
+
+/* #homePicture {
+    height: 70vh;
+    width: 100%;
     background-image: url(https://i.postimg.cc/13V4vn5j/no4-Ecomm.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0% 30%;
     background-attachment: fixed;
     backdrop-filter: blur(10rem);
-    opacity: 85%;
+    opacity: 90%;
     color: black;
     
-    } */
+    }  */
 .homeparagraph{
-        margin: 3rem;
+        /* margin: 3rem; */
         padding: 10rem;
         justify-content: center;
         align-items: center;
