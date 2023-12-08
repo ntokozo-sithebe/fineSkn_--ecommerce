@@ -48,9 +48,16 @@ let amount = document.querySelector('[data-amount]').value
 
  return `${shoppingItems[key][0].Price} * ${shoppingItems[key].length}`
   
-}console.log();
-addAmount
+};
+addAmount()
 
-let btnPurchase = document.querySelectorAll('[purchaseBtn]');{
-  alert = 'Thank you for Purchasing Fine SKN'
+let btnPurchase = document.querySelectorAll('[data-purchase]')
+
+function messageAlert(){
+  
+  alert("Thank you for Purchasing Fine SKN")
 }
+
+
+
+// alert("Thank you for Purchasing Fine SKN")
