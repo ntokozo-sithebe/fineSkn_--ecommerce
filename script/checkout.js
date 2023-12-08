@@ -39,3 +39,11 @@ ViewProducts();
 // create a variable that displays the amount 
 
 // make a button for purchase and alert "Thank you for purchasing"
+
+
+
+function addAmount(){
+
+  `${shoppingItems[key][0].Price} * ${shoppingItems[key].length}`
+  
+}
