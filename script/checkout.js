@@ -8,7 +8,7 @@ function ViewProducts() {
   tableDisplay.innerHTML = "";
   try {
     let shoppingItems = Object.groupBy(cartItems, (item) => item.id); // grouping the objects into an array
-    for (let key in shoppingItems) {                           //the shooping items will display the multiple objects/items added to cart
+    for (let key in shoppingItems) {                           //the shopping items will display the multiple objects/items added to cart
       tableDisplay.innerHTML += ` 
       <tr>
           <th scope="row">${shoppingItems[key][0].id}</th>     
@@ -25,33 +25,17 @@ function ViewProducts() {
          </tr>
           `;
     }          
-    //the 0 indicates the index without duplicating the arrays
 
-
-// create a variable that displays the amount 
-
-
-
-    // if (cartItems) {
-    //   cartItems.forEach((product) => {
-    //     tableDisplay.innerHTML +=
-    //     ` <tr>
-    //            <th scope="row">${product.id}</th>
-    //            <td>${product.productType}</td>
-    //            <td>${product.price}</td>
-    //            <td>Action</td>
-    //      </tr>
-    //       `;
-    //   });
-    // } else {
-    //   tableDisplay.innerHTML += `<div class="d-flex justify-content-center">
-    //         <div class="spinner-border" role="status">
-    //           <span class="visually-hidden">Loading...</span>
-    //         </div>
-    //       </div>`; // add spinner
-    // }
   } catch (e) {
     // error - message;
   }
 }
 ViewProducts();
+
+
+ //the 0 indicates the index without duplicating the arrays
+
+
+// create a variable that displays the amount 
+
+// make a button for purchase and alert "Thank you for purchasing"
